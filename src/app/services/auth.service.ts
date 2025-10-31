@@ -27,6 +27,10 @@ export class AuthService {
     return localStorage.getItem('auth') === 'true';
   }
 
+  isLoggedIn(): boolean {
+    return this.isAuthenticated();
+  }
+
   getUser(): string | null {
     return localStorage.getItem('user');
   }

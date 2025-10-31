@@ -1,3 +1,124 @@
-.dash{max-width:800px;margin:40px auto;padding:20px}
-.actions{display:flex;gap:10px}
-button{padding:8px;border-radius:4px;background:#1976d2;color:#fff;border:none;cursor:pointer}
+.dashboard-container {
+  min-height: calc(100vh - 60px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  overflow: hidden;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dashboard-card .icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover .icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.dashboard-card .icon-wrapper i {
+  font-size: 2.5rem;
+}
+
+.dashboard-card .card-title {
+  color: #2c3e50;
+  font-size: 1.25rem;
+}
+
+.dashboard-card .card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Stat Cards */
+.stat-card {
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.stat-card h6 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card h3 {
+  color: #2c3e50;
+}
+
+/* Header */
+.display-6 {
+  font-size: 2rem;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-card .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dashboard-card .icon-wrapper i {
+    font-size: 2rem;
+  }
+
+  .display-6 {
+    font-size: 1.5rem;
+  }
+
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stat-icon i {
+    font-size: 1.4rem;
+  }
+}
